@@ -1,8 +1,6 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-let notas = [10, 20, 30];
-let media = 0;
-notas.forEach(n => {
+var notas = [10, 20, 30];
+var media = 0;
+notas.forEach(function (n) {
     media += n;
 });
 console.log('Media da turma = ' + media / notas.length);
@@ -21,7 +19,7 @@ var Curso;
     Curso["MECA"] = "Tecnico Integrado em Informatica";
 })(Curso || (Curso = {}));
 // any: Qualquer tipo, pode ser por exemplo varias listas de diferentes tipos.
-let carro = ['320i', 2023, 280000, Marca.VW];
-let estudante = ['Kauã', 2006];
+var carro = ['320i', 2023, 280000, Marca.VW];
+var estudante = ['Kauã', 2006];
 console.log(carro);
 console.log(carro[0]);
