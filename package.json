@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Kaua-Henrique1/EstudosTyperScript/issues"
   },
-  "homepage": "https://github.com/Kaua-Henrique1/EstudosTyperScript#readme"
+  "homepage": "https://github.com/Kaua-Henrique1/EstudosTyperScript#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
 }
