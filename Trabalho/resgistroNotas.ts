@@ -1,4 +1,4 @@
-export enum situacaoEstudante {
+export enum SituacaoEstudante {
     CURSANDO = "Cursando",
     APROVADO = "Aprovado(a)",
     REPROVADO = "Reprovado(a)",
@@ -10,23 +10,23 @@ export enum situacaoEstudante {
 export class registroNotas { 
     private nomeEstudante: string;
     private matriculaEstudante: number;
+    private situacaoEstudante: SituacaoEstudante;
     private mediaPorBimestre1: number;
     private mediaPorBimestre2: number;
     private mediaParcial: undefined | number;
-    private situacaoEstudante: situacaoEstudante;
     private mediaFinal: undefined | number;
     private notaAvaliacaoFinal: undefined | number; 
 
     public calcularMedia() {
         this.mediaParcial = (this.mediaPorBimestre1 * 2 + this.mediaPorBimestre2 * 3) / 5
         if (this.mediaParcial >= 60 ) {
-            situacaoEstudante.APROVADO
+            this.situacaoEstudante = SituacaoEstudante.APROVADO
             this.mediaFinal = this.mediaParcial
         } else if (this.mediaParcial >= 10) {
-            situacaoEstudante.PROVAFINAL
-            this.calcularAvaliacaoFinal(8)
+            this.situacaoEstudante = SituacaoEstudante.PROVAFINAL
         } else {
-            situacaoEstudante.REPROVADO
+            this.situacaoEstudante = SituacaoEstudante.REPROVADO
+            this.mediaFinal = this.mediaParcial
         }
     }
 
