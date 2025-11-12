@@ -76,3 +76,4 @@ export class diario {
         this._registroNotas.push()
     }
 }
+let estudante = new diario('POO','Aluno','TSI','12345',100,turno.turnoVes)
