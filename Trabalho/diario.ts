@@ -19,8 +19,7 @@ export class diario {
         curso: string,
         idTurma: string,
         QuantidadeAulas: number,
-        turno: turno,
-        registroNotas: registroNotas[],
+        turno: turno
         ){
         this._disciplina= disciplina
         this._docente=docente
@@ -28,7 +27,6 @@ export class diario {
         this._curso=curso
         this._QuantidadeAulas=QuantidadeAulas
         this._turno=turno
-        this._registroNotas=registroNotas
     }
 
     public get disciplina(): string {
@@ -75,8 +73,6 @@ export class diario {
     } 
 
     adcionarNotaEst() {
-        
+        this._registroNotas.push()
     }
 }
-
-let kaua = new diario('POO',"Kaua","TSI","2025.2",100,turno.turnoVes, null)

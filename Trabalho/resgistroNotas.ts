@@ -18,22 +18,13 @@ export class registroNotas {
     private _notaAvaliacaoFinal: undefined | number; 
 
     constructor(_nomeEstudante: string,
-            _matriculaEstudante: number,
-            _situacaoEstudante: SituacaoEstudante = SituacaoEstudante.CURSANDO,
-            _mediaPorBimestre1: number,
-            _mediaPorBimestre2: number,
-            _mediaParcial: undefined | number = undefined,
-            _mediaFinal: undefined | number = undefined,
-            _notaAvaliacaoFinal: undefined | number) {
-        this.nomeEstudante = _nomeEstudante
-        this.matriculaEstudante=_matriculaEstudante
-        this.situacaoEstudante=_situacaoEstudante
-        this.mediaPorBimestre1=_mediaPorBimestre1
-        this.mediaPorBimestre2=_mediaPorBimestre2
-        this.mediaParcial =_mediaParcial
-        this.mediaFinal = _mediaFinal
-        this.notaAvaliacaoFinal = _notaAvaliacaoFinal
-
+        _matriculaEstudante: number,
+        _mediaPorBimestre1: number,
+        _mediaPorBimestre2: number) {
+            this.nomeEstudante = _nomeEstudante
+            this.matriculaEstudante=_matriculaEstudante
+            this.mediaPorBimestre1=_mediaPorBimestre1
+            this.mediaPorBimestre2=_mediaPorBimestre2
     }
     
     public get mediaPorBimestre1(): number {
@@ -111,7 +102,12 @@ export class registroNotas {
                 this._situacaoEstudante = SituacaoEstudante.REPROVADO;
             }   
             return this._mediaFinal;
-
         }
     }
 }
+
+let kaua = new registroNotas("Kauã H",20251148060019,4,5)
+let lucas = new registroNotas("Lucas",20251148060000,7,8)
+let marcos = new registroNotas("Marcos",20251180609,10,7)
+let giovanna = new registroNotas("Giovanna",2040619,8,9)
+let carlito = new registroNotas("Carlito",2486465420019,1,3)
