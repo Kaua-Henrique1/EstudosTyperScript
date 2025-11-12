@@ -78,3 +78,5 @@ export class diario {
         
     }
 }
+
+let kaua = new diario('POO',"Kaua","TSI","2025.2",100,turno.turnoVes, null)
