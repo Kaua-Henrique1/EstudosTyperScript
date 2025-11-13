@@ -15,6 +15,7 @@ var diario = /** @class */ (function () {
         this._curso = curso;
         this._QuantidadeAulas = QuantidadeAulas;
         this._turno = turno;
+        this._registroNotas = [];
     }
     Object.defineProperty(diario.prototype, "disciplina", {
         get: function () {
@@ -86,10 +87,9 @@ var diario = /** @class */ (function () {
         enumerable: false,
         configurable: true
     });
-    diario.prototype.adcionarNotaEst = function () {
-        this._registroNotas.push();
+    diario.prototype.adicionarEstudante = function (novoRegistro) {
+        this._registroNotas.push(novoRegistro);
     };
     return diario;
 }());
 exports.diario = diario;
-var estudante = new diario('POO', 'Aluno', 'TSI', '12345', 100, turno.turnoVes);

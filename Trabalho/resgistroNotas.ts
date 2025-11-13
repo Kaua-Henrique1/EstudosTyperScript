@@ -83,12 +83,10 @@ export class registroNotas {
 
             if (this._mediaParcial >= 60 ) {
                 this._situacaoEstudante = SituacaoEstudante.APROVADO
-                
             } else if (this._mediaParcial >= 10) {
                 this._situacaoEstudante = SituacaoEstudante.PROVAFINAL
             } else {
                 this._situacaoEstudante = SituacaoEstudante.REPROVADO
-               
             }
              
             return {media_parcial: this._mediaParcial, situacao: this.situacaoEstudante}
@@ -100,35 +98,19 @@ export class registroNotas {
     }
 
     public calcularMediaFinal(notaAvaliacaoFinal?: number | undefined) {
-        this.calcularMedia()
-
-        if (this._mediaParcial && notaAvaliacaoFinal > 0) {
-            this._mediaFinal = (notaAvaliacaoFinal + this._mediaParcial) / 2;
-
-            if (this._mediaFinal >= 60) {
-                this._situacaoEstudante = SituacaoEstudante.APROVADO;
-            } else {
-                this._situacaoEstudante = SituacaoEstudante.REPROVADO;
-            }  
-
-            this._notaAvaliacaoFinal = notaAvaliacaoFinal
-
-            return this._mediaFinal;
-        } else {
-            this._situacaoEstudante = SituacaoEstudante.REPROVADO
-            this.mediaFinal = 0
-            return this.mediaFinal
+   
+        if (this._situacaoEstudante !== SituacaoEstudante.PROVAFINAL || this._mediaParcial === undefined) {
+            return undefined; 
         }
+        this._mediaFinal = (notaAvaliacaoFinal + this._mediaParcial) / 2;
 
-       
+        if (this._mediaFinal >= 60) {
+            this._situacaoEstudante = SituacaoEstudante.APROVADO;
+        } else {
+            this._situacaoEstudante = SituacaoEstudante.REPROVADO;
+        }  
+        this._notaAvaliacaoFinal = notaAvaliacaoFinal
+
+        return {identificacao: "Aluno(a): ", media_final: this.mediaFinal, situacao: this.situacaoEstudante}
     }
 }
-
-let kaua = new registroNotas("Kauã H",20251148060019,60,50)
-let lucas = new registroNotas("Lucas",20251148060000,7,8)
-let marcos = new registroNotas("Marcos",20251180609,10,7)
-let giovanna = new registroNotas("Giovanna",2040619,8,9)
-let carlito = new registroNotas("Carlito",2486465420019,1,3)
-
-console.log(kaua.calcularMedia())
-console.log(kaua.calcularMediaFinal())

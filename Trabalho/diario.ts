@@ -27,6 +27,7 @@ export class diario {
         this._curso=curso
         this._QuantidadeAulas=QuantidadeAulas
         this._turno=turno
+        this._registroNotas = [];
     }
 
     public get disciplina(): string {
@@ -72,9 +73,9 @@ export class diario {
         this._registroNotas = value;
     } 
 
-    adcionarNotaEst() {
-        this._registroNotas.push()
-        
+    
+    public adicionarEstudante(novoRegistro: registroNotas) {
+        this._registroNotas.push(novoRegistro);
     }
 }
-let estudante = new diario('POO','Aluno','TSI','12345',100,turno.turnoVes)
+
