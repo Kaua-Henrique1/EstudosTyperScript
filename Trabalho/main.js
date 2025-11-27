@@ -24,7 +24,6 @@ aluno.adicionarEstudante(lucas);
 aluno.adicionarEstudante(marcos);
 aluno.adicionarEstudante(giovanna);
 aluno.adicionarEstudante(carlito);
-console.log(aluno.registroNotas.forEach(function (estudante) { }));
 aluno.registroNotas.forEach(function (estudante) {
     console.log('- ' + estudante.nomeEstudante + ': MediaParcial ' + estudante.mediaParcial + ', MediaFinal ' + estudante.mediaFinal + ', Situação: ' + estudante.situacaoEstudante);
 });
