@@ -1,5 +1,5 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
+exports.__esModule = true;
 exports.registroNotas = exports.SituacaoEstudante = void 0;
 var SituacaoEstudante;
 (function (SituacaoEstudante) {
@@ -9,7 +9,7 @@ var SituacaoEstudante;
     SituacaoEstudante["PROVAFINAL"] = "Prova final";
     SituacaoEstudante["CANCELADO"] = "Cancelado";
     SituacaoEstudante["TRANCADO"] = "Trancado(a)";
-})(SituacaoEstudante || (exports.SituacaoEstudante = SituacaoEstudante = {}));
+})(SituacaoEstudante = exports.SituacaoEstudante || (exports.SituacaoEstudante = {}));
 var registroNotas = /** @class */ (function () {
     function registroNotas(_nomeEstudante, _matriculaEstudante, _notaBim1, _notaBim2) {
         this._situacaoEstudante = SituacaoEstudante.CURSANDO;

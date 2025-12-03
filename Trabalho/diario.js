@@ -1,12 +1,12 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
+exports.__esModule = true;
 exports.diario = exports.turno = void 0;
 var turno;
 (function (turno) {
     turno["turnoMat"] = "Matutino";
     turno["turnoVes"] = "Vespertino";
     turno["turnoNot"] = "Noturno";
-})(turno || (exports.turno = turno = {}));
+})(turno = exports.turno || (exports.turno = {}));
 var diario = /** @class */ (function () {
     function diario(disciplina, docente, curso, idTurma, QuantidadeAulas, turno) {
         this._disciplina = disciplina;

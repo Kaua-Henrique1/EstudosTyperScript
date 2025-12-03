@@ -1,5 +1,5 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
+exports.__esModule = true;
 var resgistroNotas_1 = require("./resgistroNotas");
 var diario_1 = require("./diario");
 var diario_2 = require("./diario");

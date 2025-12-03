@@ -1,11 +1,14 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
+exports.__esModule = true;
 exports.itemPedido = void 0;
 var itemPedido = /** @class */ (function () {
     function itemPedido(produto, quantidade) {
         this._produto = produto;
         this._quantidade = quantidade;
     }
+    itemPedido.prototype.subTotal = function () {
+        return this.produto.valor * this.quantidade;
+    };
     Object.defineProperty(itemPedido.prototype, "produto", {
         get: function () {
             return this._produto;

@@ -1,0 +1,16 @@
+"use strict";
+exports.__esModule = true;
+var itemPedido_1 = require("./itemPedido");
+var Pedido_1 = require("./Pedido");
+var produto_1 = require("./produto");
+var produtosOculos = new produto_1.Produto("B123", 84, "Oculos Escuro");
+var produtosCamiseta = new produto_1.Produto("A123", 54, "Camiseta Basica");
+var produtosBone = new produto_1.Produto("C123", 19, "Sandalia Branca");
+var pedido1 = new itemPedido_1.itemPedido(produtosCamiseta, 3);
+var pedido2 = new itemPedido_1.itemPedido(produtosOculos, 2);
+var pedido3 = new itemPedido_1.itemPedido(produtosBone, 1);
+var carrinho = new Pedido_1.Pedido();
+carrinho.adicionarItem(pedido1);
+carrinho.adicionarItem(pedido2);
+carrinho.adicionarItem(pedido3);
+carrinho.imprimi();
