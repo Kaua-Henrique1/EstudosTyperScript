@@ -13,6 +13,13 @@ export class itemPedido {
         return this.produto.valor * this.quantidade
     }
 
+    adcionaProduto(quantidade: number) {
+        return this._quantidade += quantidade
+    }
+    removerProduto(quantidade: number) {
+        return this._quantidade -= quantidade
+    }
+
     public get produto(): Produto {
         return this._produto
     }

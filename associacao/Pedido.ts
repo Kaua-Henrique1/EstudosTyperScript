@@ -1,5 +1,4 @@
 import { itemPedido } from "./itemPedido";
-import { Produto } from "./produto";
 export class Pedido {
     private _itens: itemPedido[];
     private _valorTotal: number = 0;
