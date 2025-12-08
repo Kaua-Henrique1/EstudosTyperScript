@@ -1,4 +1,4 @@
-import { Produto } from "./produto";
+import { Produto } from "./produto.js";
 
 export class itemPedido {
     private _produto: Produto;
@@ -11,6 +11,12 @@ export class itemPedido {
 
     subTotal(): number {
         return this.produto.valor * this.quantidade
+    }
+    adcionaQuantProduto(quantidade: number) {
+        return this._quantidade += quantidade
+    }
+    diminuirQuantProduto(quantidade: number) {
+        return this._quantidade -= quantidade
     }
 
     public get produto(): Produto {

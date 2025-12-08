@@ -1,5 +1,4 @@
-import { itemPedido } from "./itemPedido";
-import { Produto } from "./produto";
+import { itemPedido } from "./itemPedido.js";
 export class Pedido {
     private _itens: itemPedido[];
     private _valorTotal: number = 0;
@@ -7,28 +6,6 @@ export class Pedido {
     constructor() {
         this._itens = []
         this._valorTotal = 0
-    }
-
-    adicionarItem(item: itemPedido) {
-        this._itens.push(item)
-        this.obterTotal()
-    }
-    obterTotal() {
-        let total = 0;
-        for (const i of this._itens) {
-            total += i.subTotal();
-        }
-        this.valorTotal = total;
-        return total;
-    }
-
-    imprimi() {
-        for (let i = 0; i < this.itens.length; i++) {
-            const element = this.itens[i];
-            console.log(element)
-        }
-
-        console.log("Valor total: "+ this.valorTotal)
     }
 
     public get valorTotal(): number {
